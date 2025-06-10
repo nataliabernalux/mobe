@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Header con Hero</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kaisei+Tokumin&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kaisei+Tokumin&family=Inter&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="menu-toggle" id="menu-toggle">☰</div>
+
+        <div class="logo">
+          <img class="logo-header" src="img/logo-blanco.png" alt="Logo MOBE" />
+        </div>
+
+        <nav class="nav" id="nav-menu">
+          <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Nosotros</a></li>
+            <li><a href="#">Proyectos</a></li>
+            <li><a href="#">Contacto</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="hero-content">
+        <h1>“Diseñamos espacios, construimos futuro”</h1>
+        <p>Con propósito y calidad</p>
+      </div>
+      <button class="button">Solicitá tu presupuesto sin cargo</button>
+    </section>
+
+    <main>
+      <section class="quienes-somos">
+        <div class="qs-container">
+          <div class="qs-image">
+            <img src="img/7.png" alt="Equipo MOBE trabajando" />
+          </div>
+          <div class="qs-texto">
+            <h2>Diseño y Construcción con Propósito</h2>
+            <p>
+              En MOBE Diseño y Construcción nos especializamos en el diseño y la
+              ejecución de viviendas familiares, obras civiles, proyectos
+              municipales, urbanismo y desarrollos para la industria petrolera.
+              <br /><br />
+              Nuestros trabajos se distinguen por su alta calidad utilizando
+              mano de obra especializada, integrando arquitectura moderna,
+              funcionalidad y confort.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="servicios">
+        <div class="servicios-header">
+          <h2>Nuestros Servicios</h2>
+          <p>
+            Soluciones integrales, desde el primer trazo hasta la entrega final.
+          </p>
+        </div>
+
+        <div class="servicios-grid">
+          <div class="servicio-card">
+            <img
+              src="img/diseno-y-planificacion.png"
+              alt="Diseño y planificación"
+            />
+            <div class="contenido">
+              <h3>Diseño y planificación</h3>
+              <ul>
+                <li>Diseño arquitectónico personalizado</li>
+                <li>Proyectos, anteproyectos y maquetas 3D</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="servicio-card">
+            <img src="img/ejecucion-de-obras.png" alt="Ejecución de obras" />
+            <div class="contenido">
+              <h3>Ejecución de obras</h3>
+              <ul>
+                <li>Obras nuevas llave en mano</li>
+                <li>Ampliaciones y remodelaciones</li>
+                <li>Supervisión y dirección de obra</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="servicio-card">
+            <img
+              src="img/Especialidades-técnicas.png"
+              alt="Especialidades técnicas"
+            />
+            <div class="contenido">
+              <h3>Especialidades técnicas</h3>
+              <ul>
+                <li>Instalaciones eléctricas, sanitarias y de gas</li>
+                <li>Diseño interior y exterior</li>
+                <li>Muebles a medida (melamina, Durlock, industriales)</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="proceso">
+        <div class="proceso-header">
+          <h2>Cómo Trabajamos</h2>
+          <p>Te acompañamos desde el primer trazo hasta la entrega final.</p>
+        </div>
+
+        <div class="proceso-slider" id="proceso-slider">
+          <div class="slide">
+            <img src="img/consultoria.png" alt="Consultoría Inicial" />
+            <h3>Consultoría Inicial</h3>
+            <p>
+              Escuchamos tus ideas, necesidades y presupuesto para definir el
+              mejor camino.
+            </p>
+          </div>
+          <div class="slide">
+            <img
+              src="img/disenopersonalizado1.png"
+              alt="Diseño Personalizado"
+            />
+            <h3>Diseño Personalizado</h3>
+            <p>
+              Soluciones funcionales y estéticas adaptadas a tu estilo de vida.
+            </p>
+          </div>
+          <div class="slide">
+            <img src="img/construccionyejecucion.png" alt="Ejecución de Obra" />
+            <h3>Construcción y Ejecución</h3>
+            <p>
+              Ejecutamos el proyecto con materiales y técnicas de alta calidad.
+            </p>
+          </div>
+          <div class="slide">
+            <img src="img/entregafinal.png" alt="Entrega Final" />
+            <h3>Entrega Final</h3>
+            <p>Tu nuevo espacio, listo para habitar, disfrutar y vivir.</p>
+          </div>
+        </div>
+
+        <!-- MUEVE LOS DOTS AQUÍ ABAJO -->
+        <div class="slider-dots" id="slider-dots">
+          <span class="dot active"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+        </div>
+      </section>
+    </main>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
