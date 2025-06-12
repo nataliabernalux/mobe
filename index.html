@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Header con Hero</title>
+    <title>MOBE</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Kaisei+Tokumin&display=swap"
       rel="stylesheet"
@@ -46,12 +46,12 @@
     <main>
       <section class="quienes-somos">
         <div class="qs-container">
-          <div class="qs-image">
+          <div class="qs-image reveal-left">
             <img src="img/7.png" alt="Equipo MOBE trabajando" />
           </div>
           <div class="qs-texto">
-            <h2>Diseño y Construcción con Propósito</h2>
-            <p>
+            <h2 class="reveal-fade">Diseño y Construcción con Propósito</h2>
+            <p class="reveal-fade">
               En MOBE Diseño y Construcción nos especializamos en el diseño y la
               ejecución de viviendas familiares, obras civiles, proyectos
               municipales, urbanismo y desarrollos para la industria petrolera.
@@ -66,14 +66,14 @@
 
       <section class="servicios">
         <div class="servicios-header">
-          <h2>Nuestros Servicios</h2>
-          <p>
+          <h2 class="reveal-fade">Nuestros Servicios</h2>
+          <p class="reveal-fade">
             Soluciones integrales, desde el primer trazo hasta la entrega final.
           </p>
         </div>
 
         <div class="servicios-grid">
-          <div class="servicio-card">
+          <div class="servicio-card reveal-fade">
             <img
               src="img/diseno-y-planificacion.png"
               alt="Diseño y planificación"
@@ -87,7 +87,7 @@
             </div>
           </div>
 
-          <div class="servicio-card">
+          <div class="servicio-card reveal-fade">
             <img src="img/ejecucion-de-obras.png" alt="Ejecución de obras" />
             <div class="contenido">
               <h3>Ejecución de obras</h3>
@@ -99,7 +99,7 @@
             </div>
           </div>
 
-          <div class="servicio-card">
+          <div class="servicio-card reveal-fade">
             <img
               src="img/Especialidades-técnicas.png"
               alt="Especialidades técnicas"
@@ -118,12 +118,14 @@
 
       <section class="proceso">
         <div class="proceso-header">
-          <h2>Cómo Trabajamos</h2>
-          <p>Te acompañamos desde el primer trazo hasta la entrega final.</p>
+          <h2 class="reveal-fade">Cómo Trabajamos</h2>
+          <p class="reveal-fade">
+            Te acompañamos desde el primer trazo hasta la entrega final.
+          </p>
         </div>
 
         <div class="proceso-slider" id="proceso-slider">
-          <div class="slide">
+          <div class="slide reveal-fade">
             <img src="img/consultoria.png" alt="Consultoría Inicial" />
             <h3>Consultoría Inicial</h3>
             <p>
@@ -131,7 +133,7 @@
               mejor camino.
             </p>
           </div>
-          <div class="slide">
+          <div class="slide reveal-fade">
             <img
               src="img/disenopersonalizado1.png"
               alt="Diseño Personalizado"
@@ -141,21 +143,20 @@
               Soluciones funcionales y estéticas adaptadas a tu estilo de vida.
             </p>
           </div>
-          <div class="slide">
+          <div class="slide reveal-fade">
             <img src="img/construccionyejecucion.png" alt="Ejecución de Obra" />
             <h3>Construcción y Ejecución</h3>
             <p>
               Ejecutamos el proyecto con materiales y técnicas de alta calidad.
             </p>
           </div>
-          <div class="slide">
+          <div class="slide reveal-fade">
             <img src="img/entregafinal.png" alt="Entrega Final" />
             <h3>Entrega Final</h3>
             <p>Tu nuevo espacio, listo para habitar, disfrutar y vivir.</p>
           </div>
         </div>
 
-        <!-- MUEVE LOS DOTS AQUÍ ABAJO -->
         <div class="slider-dots" id="slider-dots">
           <span class="dot active"></span>
           <span class="dot"></span>
@@ -163,7 +164,52 @@
           <span class="dot"></span>
         </div>
       </section>
-    </main>
+
+      <section class="elegirnos-section">
+        <div class="elegirnos-container">
+          <div class="elegirnos-texto" id="elegirnos-texto">
+            <h2 class="reveal-fade">¿Por Qué Elegirnos?</h2>
+           <ul>
+  <li class="reveal-fade">Fusión precisa de diseño y construcción</li>
+  <li class="reveal-fade">Atención al detalle en cada etapa del proyecto</li>
+  <li class="reveal-fade">Asesoramiento profesional y personalizado</li>
+  <li class="reveal-fade">Compromiso con la calidad, innovación y satisfacción del cliente</li>
+  <li class="reveal-fade">Proyectos únicos que reflejan tu estilo de vida</li>
+</ul>
+          </div>
+
+          <div class="elegirnos-img reveal-image">
+            <img src="img/confianza2.jpg" alt="Equipo MOBE" />
+          </div>
+        </div>
+      </section>
+
+      <section class="compromiso">
+  <div class="compromiso-header reveal-fade">
+    <h2>Compromiso Técnico y Normativo</h2>
+    <p>
+      Con respaldo técnico y profesional llevamos adelante cada obra con
+      máxima precisión.
+    </p>
+  </div>
+
+  <ul class="compromiso-lista">
+    <li class="reveal-stagger" style="--delay: 0.2s;">
+      Más de 10 años de trayectoria en ingeniería y construcción
+    </li>
+    <li class="reveal-stagger" style="--delay: 0.4s;">
+      Cumplimiento del Reglamento CIRSOC y Código de Edificación Argentino
+    </li>
+    <li class="reveal-stagger" style="--delay: 0.6s;">
+      Aplicación de normativas internacionales: ASME, ANSI, API, ISO, NFPA
+    </li>
+    <li class="reveal-stagger" style="--delay: 0.8s;">
+      Modelado BIM para proyectos precisos y eficientes
+    </li>
+  </ul>
+</section>
+
+
 
     <script src="js/script.js"></script>
   </body>

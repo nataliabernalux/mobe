@@ -85,3 +85,60 @@ slider.addEventListener("scroll", () => {
 });
 
 startAutoplay();
+
+//reveal y fade up effect
+
+document.addEventListener("DOMContentLoaded", () => {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const elements = entry.target.querySelectorAll(".reveal-fade");
+          elements.forEach((el) => {
+            el.style.animationPlayState = "running";
+          });
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.3 }
+  );
+
+  observer.observe(document.getElementById("elegirnos-texto"));
+});
+
+// reveal image al hacer scroll
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+        observer.unobserve(entry.target); // se ejecuta solo una vez
+      }
+    });
+  },
+  { threshold: 0.2 }
+);
+
+// Activar en cualquier clase que use reveal
+document
+  .querySelectorAll(".reveal-image, .reveal-fade, .reveal-left")
+  .forEach((el) => observer.observe(el));
+
+// Observador para reveal-stagger (animación escalonada)
+const observerStagger = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+        observerStagger.unobserve(entry.target);
+      }
+    });
+  },
+  { threshold: 0.3 }
+);
+
+// Aplicarlo solo a los li de la sección compromiso
+document
+  .querySelectorAll(".compromiso-lista .reveal-stagger")
+  .forEach((el) => observerStagger.observe(el));

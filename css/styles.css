@@ -221,6 +221,28 @@ h1 {
   color: #555;
 }
 
+.reveal-left {
+  opacity: 0;
+  transform: translateX(-60px);
+  transition: all 1s ease;
+}
+
+.reveal-left.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.reveal-fade {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 1s ease;
+}
+
+.reveal-fade.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 .servicios {
   background: #0e3a37;
   padding: 6rem 2rem;
@@ -298,6 +320,17 @@ h1 {
   left: 0;
   color: #00a99d;
   font-weight: bold;
+}
+
+.reveal-fade {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease;
+}
+
+.reveal-fade.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .proceso {
@@ -435,6 +468,213 @@ h1 {
     flex: 0 0 22%;
     max-width: 22%;
   }
+}
+
+.elegirnos-section {
+  background-color: #f9f9f9;
+  padding: 5rem 2rem;
+}
+
+.elegirnos-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+  align-items: center;
+}
+
+.elegirnos-img {
+  flex: 1 1 400px; /* ancho base más pequeño */
+  max-width: 450px; /* límite máximo para evitar que se vea muy grande */
+}
+
+.elegirnos-img img {
+  width: 100%;
+  max-height: 280px; /* ajustá este valor según tu preferencia */
+  object-fit: cover; /* mantiene el recorte proporcional y centrado */
+  border-radius: 12px;
+}
+
+.elegirnos-texto {
+  flex: 1 1 500px;
+}
+
+.elegirnos-texto h2 {
+  font-family: "Kaisei Tokumin", serif;
+  font-size: 2.2rem;
+  margin-bottom: 1.5rem;
+  color: #0e3a37;
+}
+
+.elegirnos-texto ul {
+  list-style: none;
+  padding: 0;
+}
+
+.elegirnos-texto li {
+  margin-bottom: 1rem;
+  font-family: "Inter", sans-serif;
+  font-size: 1.05rem;
+  color: #333;
+}
+
+/* Animación Reveal */
+.reveal-fade {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease;
+}
+.reveal-fade.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@keyframes fadeUpReveal {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.reveal-image {
+  opacity: 0;
+  transform: translateX(100px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.reveal-image.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+@keyframes slideInFromRight {
+  from {
+    opacity: 0;
+    transform: translateX(100px); /* más marcado el desplazamiento */
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+/* Responsive en Tablet y Móvil */
+
+@media (max-width: 1024px) {
+  .elegirnos-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .elegirnos-texto,
+  .elegirnos-img {
+    flex: 1 1 100%;
+  }
+
+  .elegirnos-img img {
+    max-height: 220px;
+  }
+
+  .elegirnos-texto h2 {
+    font-size: 1.8rem;
+  }
+
+  .elegirnos-texto li {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .elegirnos-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .elegirnos-texto,
+  .elegirnos-img {
+    flex: 1 1 100%;
+  }
+
+  .elegirnos-img {
+    max-width: 100%;
+  }
+
+  .elegirnos-img img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    max-height: none; /* elimina la limitación en mobile */
+    border-radius: 12px;
+  }
+
+  .elegirnos-texto h2 {
+    font-size: 1.8rem;
+  }
+
+  .elegirnos-texto li {
+    font-size: 1rem;
+  }
+}
+
+.compromiso {
+  background: #0e3a37;
+  padding: 5rem 2rem;
+  color: white;
+  text-align: center;
+}
+
+.compromiso-header h2 {
+  font-family: "Kaisei Tokumin", serif;
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.compromiso-header p {
+  font-family: "Inter", sans-serif;
+  font-size: 1.1rem;
+  color: #cfdedc;
+  max-width: 600px;
+  margin: 0 auto 3rem;
+}
+
+.compromiso-lista {
+  list-style: none;
+  padding: 0;
+  max-width: 700px;
+  margin: 0 auto;
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+}
+
+.compromiso-lista li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 1.2rem;
+}
+
+.compromiso-lista li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: #00a99d;
+  font-weight: bold;
+}
+
+/* Animación escalonada */
+.reveal-stagger {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+  transition-delay: var(--delay, 0s);
+}
+
+.reveal-stagger.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 @media (max-width: 768px) {
