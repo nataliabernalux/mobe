@@ -737,12 +737,13 @@ h1 {
   padding: 0.6rem;
   border-radius: 50%;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-  transition: transform 0.3s ease;
 }
 
 .whatsapp-float img {
-  width: 50px;
   height: 50px;
+  width: auto;
+  cursor: pointer; /* Change cursor to pointer for better UX */
+  transition: transform 0.3s ease; /* Smooth scaling effect */
 }
 
 .whatsapp-float:hover {
