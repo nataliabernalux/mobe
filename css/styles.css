@@ -748,6 +748,17 @@ h1 {
   transform: scale(1.1);
 }
 
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-contacto {
+    text-align: center;
+  }
+}
+
 /* Responsive */
 @media (max-width: 768px) {
   .footer-container {
