@@ -737,20 +737,27 @@ h1 {
   padding: 0.6rem;
   border-radius: 50%;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+
+  width: 64px; /* Agregado para evitar tamaño indefinido */
+  height: 64px;
+  display: flex; /* Centrado */
+  justify-content: center;
+  align-items: center;
+  pointer-events: auto;
 }
 
 .whatsapp-float img {
   height: 50px;
   width: auto;
-  cursor: pointer; /* Change cursor to pointer for better UX */
-  transition: transform 0.3s ease; /* Smooth scaling effect */
+  cursor: pointer;
+  transition: transform 0.3s ease;
 }
 
-.whatsapp-float:hover {
+.whatsapp-float:hover img {
   transform: scale(1.1);
 }
 
-/* Compatibilidad con notch y safe areas */
+/* Compatibilidad con notch (iOS) */
 @supports (padding: max(0px)) {
   .whatsapp-float {
     right: max(1.5rem, env(safe-area-inset-right));

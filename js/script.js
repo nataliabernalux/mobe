@@ -142,3 +142,12 @@ const observerStagger = new IntersectionObserver(
 document
   .querySelectorAll(".compromiso-lista .reveal-stagger")
   .forEach((el) => observerStagger.observe(el));
+
+//WhatsApp icon
+window.addEventListener("load", () => {
+  const wa = document.querySelector(".whatsapp-float");
+  wa.style.opacity = "0";
+  setTimeout(() => {
+    wa.style.opacity = "1";
+  }, 100);
+});
