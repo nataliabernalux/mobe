@@ -738,9 +738,6 @@ h1 {
   border-radius: 50%;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
   transition: transform 0.3s ease;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .whatsapp-float img {
@@ -752,6 +749,14 @@ h1 {
   transform: scale(1.1);
 }
 
+/* Compatibilidad con notch y safe areas */
+@supports (padding: max(0px)) {
+  .whatsapp-float {
+    right: max(1.5rem, env(safe-area-inset-right));
+    bottom: max(1.5rem, env(safe-area-inset-bottom));
+  }
+}
+
 @media (max-width: 768px) {
   .footer-container {
     flex-direction: column;
@@ -760,10 +765,6 @@ h1 {
 
   .footer-contacto {
     text-align: center;
-  }
-  .whatsapp-float img {
-    width: 40px;
-    height: 40px;
   }
 }
 
