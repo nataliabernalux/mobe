@@ -818,4 +818,8 @@ h1 {
     cursor: pointer;
     z-index: 1000;
   }
+
+  .container {
+    padding: 0 1.5rem;
+  }
 }
