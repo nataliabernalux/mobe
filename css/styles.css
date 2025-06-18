@@ -729,40 +729,42 @@ h1 {
 
 .footer-whatsapp-icon {
   position: fixed;
-  right: 10px;
-  bottom: 10px;
-  z-index: 100;
-  padding: 0.4rem;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  z-index: 9999;
+  background-color: transparent;
+  padding: 0.6rem;
   border-radius: 50%;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-  background: transparent;
+  pointer-events: auto;
+  transition: transform 0.3s ease;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  transform: translate3d(0, 0, 0);
 }
 
 .whatsapp-icon {
-  height: 50px;
-  max-width: 100%;
+  height: 48px;
   width: auto;
   cursor: pointer;
-  transition: transform 0.3s ease;
 }
 
-.footer-whatsapp-icon:hover .whatsapp-icon {
+.footer-whatsapp-icon:hover {
   transform: scale(1.1);
 }
 
-@media (max-width: 500px) {
-  .whatsapp-icon {
-    height: 40px;
-  }
+/* Ensure no horizontal scroll */
+html,
+body {
+  overflow-x: hidden;
 }
 
 @supports (padding: max(0px)) {
   .footer-whatsapp-icon {
-    right: max(10px, env(safe-area-inset-right));
-    bottom: max(10px, env(safe-area-inset-bottom));
+    right: max(1.5rem, env(safe-area-inset-right));
+    bottom: max(1.5rem, env(safe-area-inset-bottom));
   }
 }
-
 @media (max-width: 768px) {
   .footer-container {
     flex-direction: column;
