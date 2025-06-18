@@ -727,19 +727,40 @@ h1 {
   color: #fff;
 }
 
-/* Botón flotante de WhatsApp */
 .footer-whatsapp-icon {
-  position: fixed; /* Fixed position keeps it in view while scrolling */
-  right: 10px; /* Adjust the distance from the right side */
-  bottom: 10px; /* Adjust the distance from the bottom */
-  z-index: 100; /* Ensure it's above other content */
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+  z-index: 100;
+  padding: 0.4rem;
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  background: transparent;
 }
 
 .whatsapp-icon {
   height: 50px;
+  max-width: 100%;
   width: auto;
-  cursor: pointer; /* Change cursor to pointer for better UX */
-  transition: transform 0.3s ease; /* Smooth scaling effect */
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.footer-whatsapp-icon:hover .whatsapp-icon {
+  transform: scale(1.1);
+}
+
+@media (max-width: 500px) {
+  .whatsapp-icon {
+    height: 40px;
+  }
+}
+
+@supports (padding: max(0px)) {
+  .footer-whatsapp-icon {
+    right: max(10px, env(safe-area-inset-right));
+    bottom: max(10px, env(safe-area-inset-bottom));
+  }
 }
 
 @media (max-width: 768px) {
