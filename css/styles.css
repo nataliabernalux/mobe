@@ -517,6 +517,10 @@ h1 {
   font-size: 1.2rem;
 }
 
+.elegirnos-texto li span {
+  color: #0e3a37;
+  font-weight: 600;
+}
 /* Galería de imágenes en patrón creativo */
 .elegirnos-gallery {
   flex: 1 1 500px;
