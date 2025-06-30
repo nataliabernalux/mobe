@@ -151,3 +151,20 @@ window.addEventListener("load", () => {
     wa.style.opacity = "1";
   }, 100);
 });
+
+//contacto, formulario
+
+const form = document.getElementById("form");
+const mensaje = document.getElementById("mensaje-exito");
+
+form.addEventListener("submit", function (e) {
+  e.preventDefault();
+  fetch(form.action, {
+    method: "POST",
+    body: new FormData(form),
+  }).then(() => {
+    mensaje.style.display = "block";
+    form.reset();
+    setTimeout(() => (mensaje.style.display = "none"), 5000);
+  });
+});

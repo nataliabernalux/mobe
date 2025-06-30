@@ -44,7 +44,9 @@
         <h1>“Diseñamos espacios, construimos futuro”</h1>
         <p>Con propósito y calidad</p>
       </div>
-      <button class="button">Solicitá tu presupuesto sin cargo</button>
+      <a href="#formulario-contacto" class="button"
+        >Solicitá tu presupuesto sin cargo</a
+      >
     </section>
 
     <main>
@@ -226,6 +228,36 @@
             Modelado BIM para proyectos precisos y eficientes
           </li>
         </ul>
+      </section>
+      <section id="formulario-contacto" class="contacto-formulario">
+        <div class="overlay"></div>
+        <div class="contacto-container">
+          <h2>Contactanos</h2>
+          <p>Dejanos tu consulta y nos comunicaremos a la brevedad.</p>
+          <form
+            id="form"
+            action="https://formsubmit.co/mobe.construcciones@gmail.com"
+            method="POST"
+          >
+            <input type="text" name="nombre" placeholder="Nombre" required />
+            <input
+              type="email"
+              name="email"
+              placeholder="Correo electrónico"
+              required
+            />
+            <textarea
+              name="mensaje"
+              rows="5"
+              placeholder="Mensaje"
+              required
+            ></textarea>
+            <button type="submit">Enviar consulta</button>
+            <p id="mensaje-exito" style="display: none">
+              ¡Gracias! Tu mensaje fue enviado.
+            </p>
+          </form>
+        </div>
       </section>
     </main>
 
