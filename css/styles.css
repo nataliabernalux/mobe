@@ -156,20 +156,21 @@ h1 {
 }
 
 .button {
-  margin-top: 2rem;
-  padding: 0.9rem 2rem;
-  background-color: rgb(187, 241, 247); /* o usa #7fffd4 para precisión */
+  background-color: #00a99d;
+  color: white;
+  padding: 0.9rem;
   border: none;
   border-radius: 8px;
   font-size: 1rem;
-  font-weight: 600;
-  color: #003333;
   cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  transition: background-color 0.3s ease;
+  margin-top: 3em;
+  text-decoration: none;
+  font-weight: 500;
 }
 
 .button:hover {
-  background-color: rgb(157, 223, 231); /* tono más oscuro al pasar el mouse */
+  background-color: #088d84;
   transform: translateY(-2px);
 }
 
@@ -888,5 +889,13 @@ h1 {
 
   .container {
     padding: 0 1.5rem;
+  }
+
+  .hero-content {
+    margin-top: 3.5em;
+  }
+
+  .hero h1 {
+    font-size: 2.5rem;
   }
 }
