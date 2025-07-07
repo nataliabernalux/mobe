@@ -152,19 +152,23 @@ window.addEventListener("load", () => {
   }, 100);
 });
 
-//contacto, formulario
+// Inicializar EmailJS
+emailjs.init("CssKIlUBq-yphVwQx"); // 🔁 Reemplazá con tu Public Key real
 
 const form = document.getElementById("form");
 const mensaje = document.getElementById("mensaje-exito");
 
 form.addEventListener("submit", function (e) {
   e.preventDefault();
-  fetch(form.action, {
-    method: "POST",
-    body: new FormData(form),
-  }).then(() => {
-    mensaje.style.display = "block";
-    form.reset();
-    setTimeout(() => (mensaje.style.display = "none"), 5000);
-  });
+  emailjs.sendForm("service_56n2bii", "template_o56c9o6", this).then(
+    function () {
+      mensaje.style.display = "block";
+      form.reset();
+      setTimeout(() => (mensaje.style.display = "none"), 5000);
+    },
+    function (error) {
+      alert("Ocurrió un error al enviar el mensaje. Intentalo más tarde.");
+      console.error("EmailJS Error:", error);
+    }
+  );
 });
